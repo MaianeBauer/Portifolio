@@ -208,7 +208,7 @@ box-shadow: 1px 1px 4px black;
 height: 50%;
 margin-top: 5% ;
 transition: opacity .9s ease;
-aspect-ratio: 1:1;
+aspect-ratio: 1 / 1;
 }
 .profile-photo:hover {
   opacity: .8;
