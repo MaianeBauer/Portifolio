@@ -169,7 +169,7 @@ body {
  }
  .person-background {
   height: 100vh;
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +191,8 @@ body {
   width:100% ;
   opacity: 7;
   z-index: -1;
-  background: linear-gradient(270deg, transparent 30%,  var(--color-black));
+  background:
+  linear-gradient(270deg, transparent 30%, var(--color-black));
 
  }
 .wrapper-profile-photo {
@@ -201,7 +202,7 @@ justify-content: center;
 align-items: center;
 padding: 50px;
 margin: 50px 50px;
-border-radius: 100%;
+border-radius: 50%;
 border: 15px opacity white;
 box-shadow: 1px 1px 4px black;
 height: 50%;
@@ -211,8 +212,7 @@ transition: opacity .9s ease;
 .profile-photo:hover {
   opacity: .8;
 }
-.profile-photo{
- width: 100%;
+.profile-photo {
 border-radius: 100%;
 background-color:  #f27fb5;
 padding: 5px;
@@ -221,7 +221,7 @@ transition: opacity 1s;
 height: 100%;
 width: 100%;
 margin-top: 5%;
-
+aspect-ratio: 1:1;
 }
 
 .links a img {
