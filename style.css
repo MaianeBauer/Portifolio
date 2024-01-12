@@ -16,12 +16,12 @@
 html {
   scroll-behavior: smooth;
   font-size: 10px;
-   background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 body {
   font-family: "Poppins", sans-serif;
 }
-#header{
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,31 +30,31 @@ body {
   background: transparent;
   position: fixed;
   z-index: 2;
-} 
-.header-titulo{
+}
+.header-titulo {
   text-decoration: none;
 }
-.header-titulo h1{
+.header-titulo h1 {
   color: var(--color-white);
   font-size: 2rem;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
-.header-titulo h1:hover{
-  opacity: .8;
+.header-titulo h1:hover {
+  opacity: 0.8;
 }
-.navbar{
+.navbar {
   max-width: 350px;
   width: 100%;
 }
-.navbar ul{
+.navbar ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.navbar ul li{
+.navbar ul li {
   list-style: none;
 }
-.navbar ul li a{
+.navbar ul li a {
   text-decoration: none;
   color: var(--color-white);
   font-size: 1.4rem;
@@ -66,7 +66,6 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
- 
 }
 .person-content {
   height: 100%;
@@ -96,6 +95,8 @@ body {
   font-size: 4.5rem;
   line-height: 6rem;
   animation: written_text 0.5s ease forwards;
+  font-size: calc(2vw + 1.5rem);
+  line-height: calc(3vw + 1.8rem);
 }
 
 .person-content div h1 span {
@@ -116,62 +117,112 @@ body {
 .person-content div h1:nth-child(3) span {
   animation-delay: var(--timing-third-item);
 }
-.stacks-content
-{
+.stacks-content {
   display: flex;
- 
   justify-content: center;
   flex-direction: column;
-  margin-top: 6rem;
+  margin-top: 5rem 0rem 2rem;
   padding: 0px 20px;
- }
- .person-name{
+}
+.person-name {
   margin-top: 11rem;
   padding: 0 20px;
- }
- .stacks-content h3 {
+}
+.stacks-content h3 {
   color: var(--color-white);
-  font-size: 1.15rem;
+  font-size: calc(0.85vw + 0.5rem);
   margin-left: 20px;
- }
- .stacks  {
+}
+.stacks {
   display: flex;
   align-items: center;
   flex-direction: row;
-  flex-wrap:wrap;
- }
- .stacks ul li {
+  flex-wrap: wrap;
+}
+.stacks ul li {
   display: flex;
   align-items: center;
   position: relative;
   margin: 10px;
   padding: 10px;
   list-style: none;
- }
- .stacks ul li img {
-  width: 30px;
+}
+.stacks ul li img {
+  width: calc(3.5vw + 0.5rem);
   height: auto;
-  transition: tranform 3.s ease;
- }
- .stacks ul li div img:hover {
+  transition: tranform 3s ease;
+}
+.stacks ul li div img:hover {
   transform: scale(1.2);
   cursor: pointer;
-
- }
- .stacks img{
+}
+.stacks img {
   width: 30px;
   height: 30px;
- }
- .stacks ul li div:hover::after{
-  content:attr(data);
+}
+.stacks ul li div:hover::after {
+  top: calc(5vw + 1rem);
+  left: calc(1vw + 0.5rem);
+  content: attr(data);
   position: absolute;
-  top: 50px;
-  left: 10px;
   width: 20px;
   height: 20px;
-  color:aqua;
- }
- .person-background {
+  color: aqua;
+  font-size: 1.25vh;
+}
+/* sm */
+@media (max-width: 376px) {
+  .person-name {
+    padding: 0px 10px;
+  }
+  .stacks-content {
+    padding: 0px 10px;
+  }
+  .stacks-content h3 {
+    margin-left: 10px;
+  }
+  .stacks {
+    margin-top: 10px;
+  }
+  .stacks li {
+    margin: 0px;
+  }
+  .stacks li img {
+    width: calc(3.5vw + 5.5rem);
+  }
+  .person-content {
+    padding: 0px 15px;
+  }
+}
+@media (min-width: 377px) and (max-widht: 768px) {
+  .person-name {
+    padding: 0px 10px;
+  }
+  .person-content {
+    padding: 0px 15px;
+  }
+  .stacks li img {
+    width: calc(3.7vw + 0.5rem);
+  }
+  .stacks-content h3 {
+    margin-left: 10px;
+  }
+  .stacks {
+    margin-top: 10px;
+  }
+  .stacks li {
+    margin: 0px;
+  }
+}
+@media (max-width: 1000px) and (orientation: landscape) {
+  .stacks ul li div:hover::after {
+    font-size: 1.3vw;
+  }
+  .stacks-content h3 {
+    font: size 1vw;
+  }
+}
+.person-background {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -184,68 +235,88 @@ body {
   background-size: cover;
   background-position: top center;
   z-index: 1;
-
- }
- .person-background::after{
+}
+.person-background::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height:100% ;
-  width:100% ;
+  height: 100%;
+  width: 100%;
   opacity: 7;
   z-index: -1;
-  background:
-  linear-gradient(270deg, transparent 30%, var(--color-black));
-
- }
+  background: linear-gradient(270deg, transparent 30%, var(--color-black));
+}
 .wrapper-profile-photo {
-opacity: 95%;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 50px;
-margin: 50px 50px;
-border-radius: 50%;
-border: 15px opacity white;
-box-shadow: 1px 1px 4px black;
+  opacity: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(1vw + 0.2rem);
+  margin: 20px 25px;
+  border-radius: 60%;
+  border: 15px opacity white;
+  box-shadow: 1px 1px 4px black;
+  transition: opacity 0.9s ease;
+  aspect-ratio: 1 / 1;
+
+  /*
 height: 50%; 
 margin-top: 5% ;
-transition: opacity .9s ease;
-aspect-ratio: 1 / 1;
+ */
 }
 .profile-photo:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .profile-photo {
-border-radius: 100%;
+  max-width: 320px;
+  border-radius: 60%;
+  width: 80%;
+  background-color: #f27fb5;
+  padding: 3px;
+  box-sizing: border-box;
+  transition: opacity 1s;
+  /*
 background-color:  #f27fb5;
 padding: 8px;
 box-sizing: border-box;
 transition: opacity 1s;
 height: 100%;
 width: 100%;
-margin-top: 5%;
+margin-top: 5%;*/
 }
 
 .links a img {
-  width: 30px;
-  height: 30px;
-  margin: 10px;
+  width: calc(2vw + 0.8rem);
+  height: calc(2vw + 0.8rem);
+  margin: calc(0.8vw + 0.8rem);
   filter: brightness(0.8);
   transition: all.3s ease;
-
 }
 .links a img:hover {
   transform: scale(1.15);
-  filter:brightness(1);
+  filter: brightness(1);
 }
-#about {
-height: 100vh;
-width: 100%;
-background: var(--color-black);
-display: flex;
-color: #fff;
+@media (max-width: 768px) {
+  .links a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 1440px){
+.profile-photo {
+  width: 25vw;
+  max-width: initial;
+}
+}
+@media (min-width: 1440px) and ( orientation : landscape) {
+   #about {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-black);
+    display: flex;
+    color: #fff;
+  }
 }
 .background-about {
   width: 50%;
@@ -254,29 +325,28 @@ color: #fff;
   justify-content: center;
   align-items: center;
 }
-.img-wrapper{
+.img-wrapper {
   height: 100%;
   width: 100%;
   position: relative;
 }
-.img-wrapper::after{
+.img-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-  linear-gradient(.25turn, transparent 30%, var(--color-black)),
-  linear-gradient(.5turn, transparent 30%, var(--color-black)),
-  linear-gradient(1turn, transparent 60%, var(--color-black));
+  background: linear-gradient(0.25turn, transparent 30%, var(--color-black)),
+    linear-gradient(0.5turn, transparent 30%, var(--color-black)),
+    linear-gradient(1turn, transparent 60%, var(--color-black));
 }
 .img-wrapper img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.box-about{
+.box-about {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -290,14 +360,14 @@ color: #fff;
 .section-subtitle h2 p:nth-child(2) span {
   padding: 3px 5px;
   border-radius: 4px;
-  color:var(--color-black);
+  color: var(--color-black);
   background: var(--color-white);
 }
 .box-about h3 {
   margin: 3rem;
   font-size: 2rem;
 }
-.box-about h3 p{
+.box-about h3 p {
   display: inline-block;
   padding: 2px 4px;
   width: fit-content;
@@ -308,37 +378,36 @@ color: #fff;
 .box-about h4 {
   margin: 1rem 3rem;
   font-size: 1.5rem;
-
 }
-.box-about h4 p{
+.box-about h4 p {
   display: inline;
   padding: 2px;
   color: #d12f7a;
   font-size: bold;
   font-weight: 1.75rem;
 }
-.button-cta{
+.button-cta {
   display: flex;
   max-width: 190px;
   margin: 4rem 3rem;
 }
-.button-cta button{
+.button-cta button {
   display: inline-block;
   width: 100%;
   max-width: 172px;
   padding: 10px;
   margin-bottom: 3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   border-radius: 10px;
   cursor: pointer;
 }
-.button-cta button:hover{
-  transition: all .3s ease;
-  filter: brightness(.8);
+.button-cta button:hover {
+  transition: all 0.3s ease;
+  filter: brightness(0.8);
 }
-#projects{
+#projects {
   height: 100vh;
   width: 100%;
   background: var(--color-black);
@@ -346,13 +415,13 @@ color: #fff;
   flex-direction: column;
   color: var(--color-white);
 }
-.projects-title h2{
+.projects-title h2 {
   margin: 3rem;
   padding: 1rem;
   font-size: 3rem;
   color: var(--color-white);
 }
-.wrapper-projects{
+.wrapper-projects {
   display: flex;
   margin-top: 2rem;
   height: 500px;
@@ -360,7 +429,7 @@ color: #fff;
   justify-content: center;
   flex-direction: row;
 }
-.card-projects{
+.card-projects {
   width: 320px;
   height: 450px;
   padding: 30px 20px 20px;
@@ -372,7 +441,7 @@ color: #fff;
   border-radius: 20px;
   position: relative;
 }
-.card-projects::after{
+.card-projects::after {
   content: "";
   position: absolute;
   top: 0;
@@ -382,25 +451,24 @@ color: #fff;
   background: var(--color-pink);
   border-radius: 20px 20px 0px 0px;
 }
-.content-project{
+.content-project {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   z-index: 1;
-
 }
-.image-project{
+.image-project {
   height: 250px;
   width: 250px;
   border-radius: 30px;
   border: 4px solid blue;
   margin: 0 auto;
   overflow: hidden;
-  
+
   position: relative;
 }
-.image-project img{
+.image-project img {
   height: 100%;
   width: 100%;
   border-radius: 30px;
@@ -412,22 +480,22 @@ color: #fff;
   transition: transform 3s ease-out;
   cursor: pointer;
 }
-.image-project img:hover{
+.image-project img:hover {
   transform: scale(1.1);
 }
 .content-project span {
   color: #000000;
   font-weight: bold;
   font-size: 1.7rem;
-  margin: .75rem auto .5rem auto;
+  margin: 0.75rem auto 0.5rem auto;
 }
-.content-project  p{
+.content-project p {
   color: red;
   font-weight: bold;
   font-size: 1.3rem;
-  margin: 0rem .75rem;
+  margin: 0rem 0.75rem;
 }
-.cta-project{
+.cta-project {
   width: 200px;
   margin: auto auto 15px auto;
   display: flex;
@@ -442,9 +510,9 @@ color: #fff;
   border-radius: 10px;
   text-decoration: none;
 }
-.cta-project span a:hover{
-opacity: .7;
-transition: opacity .3s eas;
+.cta-project span a:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s eas;
 }
 #Contato {
   display: flex;
@@ -453,59 +521,59 @@ transition: opacity .3s eas;
   width: 100%;
   background: #000000;
 }
-.contato h2{
+.contato h2 {
   margin: 3rem;
   padding: 3rem;
   font-size: 3rem;
   color: var(--color-white);
 }
-.contact-icons-wapper{
+.contact-icons-wapper {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.contact-icon-content{
+.contact-icon-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0rem 3rem ;
+  margin: 0rem 3rem;
   padding: 1rem;
 }
-.contact-icon{
+.contact-icon {
   height: 60px;
   width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 2rem;
- background: rgb(255, 196, 255);
+  background: rgb(255, 196, 255);
   padding: 1rem;
   border-radius: 50%;
 }
-.contact-icon p{
+.contact-icon p {
   font-size: 3rem;
   color: var(--color-pink);
 }
-.info-contact span{
+.info-contact span {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--color-white);
 }
-.info-contact p{
-  margin: .25rem 0rem;
+.info-contact p {
+  margin: 0.25rem 0rem;
   color: var(--color-white);
 }
-.info-contact a{
-  margin: .25rem 0rem;
+.info-contact a {
+  margin: 0.25rem 0rem;
   text-decoration: none;
   color: var(--color-white);
   display: block;
 }
-.info-contact a:hover{
-  transition: color 3.s ease;
+.info-contact a:hover {
+  transition: color 3s ease;
   color: var(--color-pink);
 }
-#footer{
+#footer {
   height: 15vh;
   width: 100%;
   display: flex;
@@ -515,7 +583,7 @@ transition: opacity .3s eas;
   background: var(--color-black);
   color: #fff;
 }
-.container-footer{
+.container-footer {
   display: flex;
   justify-content: center;
   align-items: center;
