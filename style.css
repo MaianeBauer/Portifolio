@@ -987,7 +987,7 @@ margin-top: 5%;
       margin-right: 1vw;
     }
   }
-  #contacts {
+  #contact {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1038,8 +1038,8 @@ margin-top: 5%;
   .contac-info span {
     font-size: 1.2rem;
     font-weight: bold;
-    /*
-    color: var(--color-white);*/
+    
+    color: var(--color-white);
   }
   .contac-info p {
     margin: 0.25rem 0rem;
@@ -1090,10 +1090,12 @@ margin-top: 5%;
     
       .contact-info span {
         font-size: 1.1vw;
+        color: white;
       }
     
       .contact-info p {
         font-size: .7vw;
+        color:var(--color-white);
       }
     
       .contact-info a {
@@ -1118,16 +1120,6 @@ margin-top: 5%;
       flex-direction: column;
       color: var(--color-white);
     }
-    @media (min-width: 1840px) {
-      .container-footer h2 {
-        font-size: calc(1vw + .2rem);
-      }
-    
-      .container-footer h3 {
-        font-size: .8vw;
-      }
-    }
-    
     @keyframes written_text {
       100% {
         color: palevioletred;
