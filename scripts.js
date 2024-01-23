@@ -52,7 +52,7 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
   if (window.scrollY >= 200) {
-    header.style.background = '#191919'
+    header.style.background = 'rgba(225, 57, 136, 0.26)'
   } else {
     header.style.background = 'transparent'
   }

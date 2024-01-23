@@ -12,7 +12,7 @@
   --color-pink: #d12f7a;
   --color-blue: #073fcc;
   --color-black: #0c0c0c;
-  --color-purple: #5f01ac;
+  --color-purple: #ac016b;
 }
  /* --timing-first-item: 1.5s;
   --timing-second-item: 3.5s;
@@ -26,6 +26,8 @@ html {
 
 body{
   font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 10px;
 }
 
 #header{
@@ -464,9 +466,9 @@ body{
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: .7;
+  opacity: 270;
   z-index: -1;
-  background: linear-gradient(270deg, transparent 30%, var(--color-black));
+  background: linear-gradient(270deg, transparent 10%, var(--color-black));
 }
 .wrapper-profile-photo {
   opacity: 95%;
@@ -906,10 +908,10 @@ margin-top: 5%;
     margin: 0.75rem auto 0.5rem auto;
   }
   .card-projects p {
-    color: red;
+    color: #dfd3d3c2;
     font-weight: bold;
     font-size: 1.1rem;
-    margin: 0rem 0.75rem;
+    margin: .5rem 8.75rem;
   }
   .cta-project {
     width: 200px;
@@ -1021,7 +1023,7 @@ margin-top: 5%;
     justify-content: center;
     align-items: center;
     margin-right: 2rem;
-    background: var(--color-white);
+    background: #f42c9369;
     padding: 1rem;
     border-radius: 50%;
   }
